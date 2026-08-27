@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #202736 0%, #343f52 50%, #263549 100%) !important;
+    min-height: 100vh;
+}
+
+.textContainer{
+    margin: 40px;
+    margin-left: 120px;
+    color: #ecf0f1;
+}
+
+.destinationGrid{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-rows: repeat(autofit, 180px);
+    grid-template-columns: repeat(auto-fit, 240px);
+    text-align: center;
+    margin: 40px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.destinationCards {
+    position: relative;
+    border-radius: 16px;
+    border: none;
+    justify-items: center;
+    display: block;
+    text-decoration: none;
+    background-size: cover !important;
+    background-position: center !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    height: 180px;
+}
+
+.destinationName{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 125px;
+    padding: 20px 15px;
+    background: linear-gradient(180deg, transparent 0%, rgba(18, 24, 30, 0.95) 100%);
+    height: auto;
+    width: 100%;
+    border-radius: 0 0 16px 16px;
+    border: none;
+    color: #ecf0f1;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.destinationCards:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.destinationCards:hover .destinationName {
+    background: linear-gradient(180deg, rgba(18, 24, 30, 0.2) 0%, rgba(0,0,0, 0.85) 100%);
+    color: #ecf0f1;
+    transform: translateY(-2px);
+}
+
+/* Additional modern enhancements */
+.destinationCards::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(41, 128, 185, 0.2), rgba(142, 68, 173, 0.2));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+    border-radius: 16px;
+}
+
+.destinationName {
+    z-index: 2;
+    position: relative;
+}
+
+.destinationName p {
+    margin: 0;
+    padding: 0;
+}

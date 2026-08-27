@@ -1,0 +1,94 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #202736; 
+    color: #ecf0f1; 
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: #41a085;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #1abc9c; 
+    padding-bottom: 10px;
+}
+
+/* Form Container */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(44, 62, 80, 0.9); 
+    border: 1px solid #41a085; 
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+/* Label Styling */
+label {
+    display: block;
+    margin-bottom: 4px;
+    color: #ecf0f1; 
+    font-weight: bold;
+}
+
+/* Input and Select Fields */
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #41a085; 
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #ecf0f1; 
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #1abc9c;
+    box-shadow: 0 0 6px #1abc9c;
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* File Input Styling */
+input[type="file"] {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 14px 0;
+    margin: 20px auto 0 auto;
+    background-color: #41a085; 
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-sizing: border-box;
+}
+
+button[type="submit"]:hover {
+    background-color: #1abc9c; 
+    transform: translateY(-2px);
+}
+
+p {
+    text-align: left;
+    color: #ecf0f1; 
+    font-weight: bold;
+    margin-top: 10px;
+}
