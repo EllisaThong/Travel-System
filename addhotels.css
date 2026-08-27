@@ -1,0 +1,75 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #202736; /* Dark navy background */
+    margin: 0;
+    padding: 0;
+    color: #ecf0f1; /* Light text */
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px); /* Leave space for header */
+    padding-top: 20px;
+}
+
+.form-container {
+    background-color: #2c3e50; /* Dark gray-blue */
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+    width: 420px;
+    border: 1px solid #41a085; /* Teal accent */
+}
+
+h2 {
+    text-align: center;
+    color: #41a085; /* Teal Green */
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #ecf0f1; /* Light text */
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"],
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #41a085; /* Teal border */
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #1a1a1a; /* Dark input background */
+    color: #ecf0f1; /* Light input text */
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+button[type="submit"] {
+    padding: 12px;
+    background-color: #41a085; /* Teal button */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #1abc9c; /* Lighter teal on hover */
+}

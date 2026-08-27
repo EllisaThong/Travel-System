@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #8b5e3c; 
+    font-size: 32px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 20px;
+    border-radius: 10px;
+    background-color: #f2e5d7;
+}
+
+.tabs {
+    margin-bottom: 20px;
+    display: flex;        /* make it flex container */
+    justify-content: center;  /* center items horizontally */
+    gap: 10px; 
+}
+
+.tabs button {
+    padding: 10px 20px;
+    background-color: #FFCC00; /* Batik Gold */
+    color: #333333;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    border-bottom: 5px solid #df5b22;
+    transition: background-color 0.3s;
+}
+
+.tabs button:hover {
+    background-color: #ffe98f;
+    color: #7b7b7b;
+    border-bottom: 2px solid #df5b22;
+}
+
+.tabs button.active {
+    background-color: #D6A756;
+    color: #f7f7f7;
+}
+
+.tab-content {
+    display: none;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+/* Tables on both side*/
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+.paymentTable th,
+.invoiceTable th {
+    background-color: #406882;
+    color: #ffffff;
+    text-decoration: underline  1px solid #ffffff;
+}
+
+.paymentTable th:first-child,
+.invoiceTable th:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.paymentTable th:last-child,
+.invoiceTable th:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+th, td {
+    padding: 20px;
+    text-align: left;
+}
+
+.Table-row {
+    margin-bottom: 20px;
+    border-bottom: #bebebe 1px solid;
+}
+
+.Table-row:hover {
+  background-color: #e9ecef; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  transform: scale(1.02); 
+  transition: all 0.2s ease;
+  border-bottom: 0;
+}
+/* button on generate report*/
+h2 {
+    text-align: center;
+    color: #2f5d50; 
+    font-size: 32px;
+    text-decoration:underline;
+}
+
+.action-buttons button {
+    text-decoration: none;
+    padding: 10px 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+    background-color: #406882; /*pastelblue*/
+    color: #ffffff !important;
+    border-bottom: 5px solid #2e4a5e;
+}
+
+.action-buttons button:hover {
+    background-color: #325166;
+    border-bottom: 2px solid #2e4a5e;
+}

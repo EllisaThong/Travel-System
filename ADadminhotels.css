@@ -1,0 +1,235 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #b71818; /* Charcoal Black */
+    margin: 0;
+    background-image: url('your-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Container */
+.hotel-container {
+    border-radius: 10px;
+}
+
+.hotel-title {
+    text-align: center;
+    color: #8b5e3c; 
+    font-size: 32px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 20px;
+    border-radius: 10px;
+    background-color: #f2e5d7;
+}
+
+/* Add Button */
+.add-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 18px;
+    background-color: #D6A756;
+    color: #f7f7f7;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border-bottom: 5px solid #df5b22;
+    transition: background-color 0.3s;
+}
+
+.add-button:hover {
+    background-color: #C29B42;
+    border-bottom: 2px solid #df5b22;
+}
+
+/* Search Bar */
+.search-box {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    padding: 10px 15px;
+    width: 40%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 0.2px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    color:gray;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #FFCC00; /* Batik Gold */
+    color: #333333;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    border-bottom: 5px solid #df5b22;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #ffe98f;
+    color: #7b7b7b;
+    border-bottom: 2px solid #df5b22;
+}
+
+.hotel-image {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* Hotel Grid */
+.hotel-list {
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(280px, 1fr)); /* or 200px */
+    margin-bottom:20px;
+    gap: 5px;
+}
+
+/* Hotel Card */
+.hotel-card {
+    background-color: #e9ecef;
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 350px;
+    margin: 0;
+    overflow: hidden ;
+}
+
+.hotel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hotel-name {
+    font-size: 20px;
+    color: #4682B4;
+    text-align: center;
+    margin-top: 0px;
+  
+}
+
+.hotel-description {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333333;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.hotel-room,
+.hotel-price,
+.hotel-phone,
+.hotel-email,
+.hotel-address {
+    font-style: bold;
+    font-size: 14px;
+    margin: 6px 0;
+    padding: 18px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+/* Admin Buttons */
+.admin-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.admin-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Edit Button */
+.btn-edit, .btn-delete {
+    text-decoration: none;
+    padding: 8px 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    
+}
+
+.edit-btn {
+    background-color: #ffffff; /*white*/
+    color: #2b2b2b !important;
+    border-bottom: 5px solid #aeaeae;
+
+}
+
+.delete-btn {
+    margin-left: 10px;
+    background-color: #406882; /*pastelblue*/
+    color: #ffffff !important;
+    border-bottom: 5px solid #2e4a5e;
+
+}
+
+.edit-btn:hover {
+    background-color: #fff7f7;
+    border-bottom: 2px solid #aeaeae
+}
+
+.delete-btn:hover {
+    background-color: #325166;
+    border-bottom: 2px solid #2e4a5e;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .search-input {
+        width: 100%;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .search-button {
+        border-radius: 0 0 8px 8px;
+        width: 100%;
+    }
+
+    .search-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .admin-buttons {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-end;
+    }
+}

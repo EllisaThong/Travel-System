@@ -1,0 +1,217 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f2e5d7;
+  overflow-x: hidden;
+}
+
+.img-container {
+  position: relative;
+  width: 100%;
+  height: 400px; /* or 100vh for full screen height */
+  overflow: hidden;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.img-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* fully transparent initially */
+  transition: background-color 0.5s ease;
+  z-index: 1;
+}
+
+.main-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  opacity: 70%;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+  z-index: 2;
+  will-change: transform, opacity;
+  animation: fadeInUp 1s ease-out 0.3s;
+}
+
+.img-container:hover .main-image {
+  transform: scale(1.1);
+  
+}
+
+.img-container:hover::after {
+  background-color: rgba(0, 0, 0, 0.3); /* slightly dark */
+}
+
+
+.whowearecontent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  max-height:350px;
+  padding: 20px 40px;
+  background: linear-gradient(
+  to bottom,
+  #523520 0%,   /* darker top shadow */
+  #8B5E3C 40%,
+  #8B5E3C 60%,
+  #523520 100%  /* darker bottom shadow */
+);
+  position: relative;
+}
+
+.whowearep {
+  flex: 1;
+  font-family: "Georgia", serif;
+  font-size: 1.1rem;
+  color: #e9ecef;
+  margin-top: 20px;
+}
+
+.whowearep h1:hover {
+  text-decoration: underline;
+  transition: transform 0.3s ease 0.5s;
+}
+
+.whowearepng {
+  width: 300px; 
+  transform: rotate(-8deg); 
+  filter: drop-shadow(-36px 5px 24px rgba(0, 0, 0, 0.2));
+  margin-bottom: 40px; 
+}
+
+.passports-image {
+  width: 150%;
+  height: 400px;
+  object-fit: contain;
+  display: block;
+}
+
+.ourmission {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Adjust height as needed */
+  overflow: hidden;
+}
+
+.mission-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Glassmorphism box */
+.mission-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  text-align: center;
+  max-width: 500px;
+  border:#ffffff solid 1px;
+  transition: transform 0.3s ease 0.3s;
+
+}
+
+/* Optional: Style the text */
+.mission-title {
+  margin: 0 0 10px;
+  font-size: 24px;
+}
+
+.mission-content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.whychooseuscontent {
+  display: flex;
+  margin-top: 20px;
+  align-items: center; /* vertically center if heights differ */
+  gap: 40px; /* optional spacing between text and image */
+  margin-bottom: 40px;
+}
+
+.whychooseuscontent p {
+  flex: 0 0 20%;
+  margin: 0; /* remove extra spacing */
+}
+
+.text-section {
+  height: 400px;
+  font-family: "Georgia", serif;
+  font-size: 1.1rem;
+  flex: 0 0 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* vertically center inside its own column */
+  align-items: center;      /* horizontally center the text */
+  margin-left: 20px; /* space between text and image */
+  text-align: center;
+  color: #8B5E3C;
+}
+
+.text-section h1 {
+  margin-bottom: 50px;
+}
+
+.beach-image {
+  flex: 0 0 80%;
+  max-width: 100%;
+  height: 400px;
+  display: block;
+  object-fit: cover; /* ensures nice image scaling */
+  filter: brightness(0.8);
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  box-shadow: -36px 5px 24px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------*/
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -30%); /* shifted lower */
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%); /* final centered */
+  }
+
+}

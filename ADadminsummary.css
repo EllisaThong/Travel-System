@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.welcomeboard {
+  padding: 10px 20px;
+  background-color: #f2e5d7;
+  color: #8B5E3C;
+  border-radius: 10px;
+}
+
+.welcome-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.welcome-row h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.todayDate {
+  font-size: 14px;
+  margin: 0;
+}
+
+/*chart section*/
+.charts-row {
+  display: flex;
+  gap: 20px;                /* Space between the boxes */
+  justify-content: center;  /* Center the whole row */
+  flex-wrap: wrap;          /* Allow wrapping on smaller screens */
+  margin-top: 20px;
+}
+
+.charts {
+  width: 300px;
+  margin-top: 5px;
+  padding: 20px;
+  display: flex;
+  justify-content: center; 
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15),
+            0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/*summary card section*/
+
+.summary-section {
+  margin-top: 20px;
+  display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.summary-card {
+  width: 180px;             /* ✅ Compact width */
+  padding: 15px;
+  border-radius: 12px;
+  background-color: #e9ecef;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.summary-card:nth-child(1) {
+  background-color: #FFCC00; 
+  border-bottom: 10px solid #FF9900; 
+  
+}
+.summary-card:nth-child(2) {
+  background-color: #406882;
+  border-bottom: 10px solid #274151; 
+}
+.summary-card:nth-child(3) {
+  background-color: #2f5d50; 
+  border-bottom: 10px solid #18352d; 
+
+}
+.summary-card:nth-child(4) {
+  background-color: #d6a756; 
+  border-bottom: 10px solid #7b6031; 
+
+}
+.summary-card:nth-child(5) {
+  background-color: #f2e5d7; 
+  border-bottom: 10px solid #b4997c; 
+
+}
+
+.summary-card h3 {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.summary-card p {
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2b2b2b;
+  text-decoration: underline;
+}
+
+.summary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 768px) {
+  .summary-section {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-content: center;
+  }
+}

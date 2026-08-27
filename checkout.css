@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+html, body {
+    height: 100%;
+    background: linear-gradient(135deg, #202736 0%, #343f52 50%, #263549 100%) fixed;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #ecf0f1;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.checkout-container {
+    max-width: 700px;
+    margin: 60px auto 30px auto;
+    padding: 30px;
+    background: #000000;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 500px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.checkout-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(41, 128, 185, 0.1), rgba(142, 68, 173, 0.1));
+    opacity: 0.1;
+    border-radius: 20px;
+    z-index: 0;
+}
+
+.checkout-container * {
+    position: relative;
+    z-index: 1;
+}
+
+.checkout-container h1 {
+    color: #ecf0f1;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.checkout-container h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, #41a085 50%, transparent 100%);
+}
+
+.checkout-container form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.package-summary p {
+    font-size: 16px;
+    margin: 12px 0;
+    padding: 15px;
+    background: rgba(236, 240, 241, 0.1);
+    border: 1px solid rgba(236, 240, 241, 0.2);
+    border-radius: 12px;
+    color: #bdc3c7;
+    line-height: 1.6;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.package-summary p:hover {
+    background: rgba(236, 240, 241, 0.15);
+    border-color: rgba(65, 160, 133, 0.3);
+}
+
+.package-summary p strong {
+    color: #ecf0f1;
+    font-weight: 600;
+}
+
+form label {
+    display: block;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: #ecf0f1;
+    font-size: 16px;
+}
+
+form input[type="date"],
+form input[type="number"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(236, 240, 241, 0.3);
+    font-size: 15px;
+    margin-bottom: 8px;
+    background: rgba(236, 240, 241, 0.1);
+    color: #ecf0f1;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+form input[type="date"]:focus,
+form input[type="number"]:focus {
+    outline: none;
+    border-color: #41a085;
+    box-shadow: 0 0 15px rgba(65, 160, 133, 0.3);
+    background: rgba(236, 240, 241, 0.15);
+}
+
+form input[type="date"]::placeholder,
+form input[type="number"]::placeholder {
+    color: #bdc3c7;
+}
+
+/* Custom styling for date input */
+form input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    display: block;
+    font-weight: 500;
+}
+
+.checkout-button {
+    background: linear-gradient(135deg, #41a085 0%, #2c8968 100%);
+    color: #ecf0f1;
+    border: none;
+    padding: 18px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 30px;
+    align-self: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    width: 100%;
+    max-width: 350px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 8px 25px rgba(65, 160, 133, 0.3);
+}
+
+.checkout-button:hover {
+    background: linear-gradient(135deg, #2c8968 0%, #236d58 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(65, 160, 133, 0.4);
+}
+
+.checkout-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(65, 160, 133, 0.3);
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .checkout-container {
+        margin: 20px 15px;
+        padding: 20px;
+        max-width: none;
+        border-radius: 16px;
+    }
+    
+    .checkout-container h1 {
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+    
+    .package-summary p {
+        font-size: 14px;
+        padding: 12px;
+        margin: 8px 0;
+    }
+    
+    form input[type="date"],
+    form input[type="number"] {
+        max-width: none;
+        padding: 15px 12px;
+        font-size: 16px; /* Prevents zoom on iOS */
+        margin-bottom: 12px;
+    }
+    
+    form label {
+        margin-top: 18px;
+        margin-bottom: 8px;
+        font-size: 16px;
+    }
+    
+    .checkout-button {
+        padding: 15px 25px;
+        font-size: 16px;
+        margin-top: 25px;
+        max-width: none;
+        width: 100%;
+    }
+    
+    .error-message {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .checkout-container {
+        margin: 15px 10px;
+        padding: 15px;
+    }
+    
+    .checkout-container h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .package-summary p {
+        font-size: 13px;
+        padding: 10px;
+        margin: 6px 0;
+    }
+    
+    form input[type="date"],
+    form input[type="number"] {
+        padding: 12px 10px;
+        font-size: 16px;
+    }
+    
+    form label {
+        font-size: 15px;
+        margin-top: 15px;
+    }
+    
+    .checkout-button {
+        padding: 12px 20px;
+        font-size: 15px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .checkout-container {
+        margin: 10px 15px;
+        min-height: auto;
+        padding: 20px;
+    }
+    
+    .checkout-container h1 {
+        margin-bottom: 15px;
+        font-size: 32px;
+    }
+    
+    .package-summary p {
+        margin: 6px 0;
+        padding: 8px;
+    }
+    
+    form label {
+        margin-top: 10px;
+    }
+    
+    .checkout-button {
+        margin-top: 20px;
+    }
+}
+
+/* Animation for container on load */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.checkout-container {
+    animation: slideInUp 0.6s ease-out;
+}

@@ -1,0 +1,149 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(135deg, #202736 0%, #343f52 50%, #263549 100%);
+    color: #ecf0f1;
+    margin: 0;
+    padding: 0;
+}
+
+.page-title {
+    color: #41a085;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #1abc9c;
+    padding-bottom: 10px;
+}
+
+.filter-form form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgba(44, 62, 80, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1000px;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.filter-form input,
+.filter-form select {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: 1px solid #41a085;
+    border-radius: 8px;
+    width: 180px;
+    outline: none;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+.filter-form button {
+    padding: 10px 20px;
+    background-color: #41a085;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.filter-form button:hover {
+    background-color: #1abc9c;
+}
+
+.add-flight-btn {
+    display: inline-block;
+    margin-left: 5%;
+    margin-bottom: 20px;
+    padding: 10px 18px;
+    background-color: #41a085;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.add-flight-btn:hover {
+    background-color: #1abc9c;
+}
+
+.flights-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.flight-card {
+    background-color: #1a1a1a;
+    border: 1px solid #41a085;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.flight-card h3 {
+    color: #41a085;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.flight-card p {
+    font-size: 14px;
+    margin: 6px 0;
+    line-height: 1.4;
+    color: #bdc3c7;
+}
+
+.no-results {
+    text-align: center;
+    font-size: 18px;
+    margin: 40px auto;
+    color: #ecf0f1;
+}
+
+.admin-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.edit-btn {
+    background-color: #2980b9;
+    transition: background-color 0.3s;
+}
+
+.edit-btn:hover {
+    background-color: #3498db;
+}
+
+.delete-btn {
+    background-color: #c0392b;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #e74c3c;
+}

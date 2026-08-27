@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #8b5e3c; 
+    font-size: 32px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 20px;
+    border-radius: 10px;
+    background-color: #f2e5d7;
+}
+
+.search-box {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-box input[type="text"] {
+    padding: 10px 15px;
+    width: 40%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 0.2px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    color:gray;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    background-color: #FFCC00; /* Batik Gold */
+    color: #333333;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    border-bottom: 5px solid #df5b22;
+    transition: background-color 0.3s;
+}
+
+.search-box button:hover {
+    background-color: #ffe98f;
+    color: #7b7b7b;
+    border-bottom: 2px solid #df5b22;
+}
+
+.user-table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+.table-header {
+    background-color: #406882;
+    color: #ffffff;
+    text-decoration: underline  1px solid #ffffff;
+}
+
+.table-header th:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.table-header th:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.table-row {
+    margin-bottom: 20px;
+    border-bottom: #bebebe 1px solid;
+}
+
+.user-table td {
+  padding: 20px 10px;
+}
+
+.table-row:hover {
+  background-color: #e9ecef; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  transform: scale(1.02); 
+  transition: all 0.2s ease;
+  border-bottom: 0;
+}
+
+.btn-edit, .btn-delete {
+    text-decoration: none;
+    padding: 8px 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    
+}
+
+.btn-edit {
+    background-color: #ffffff; /*white*/
+    color: #2b2b2b !important;
+    border-bottom: 5px solid #aeaeae;
+
+}
+
+.btn-delete {
+    margin-left: 10px;
+    background-color: #406882; /*pastelblue*/
+    color: #ffffff !important;
+    border-bottom: 5px solid #2e4a5e;
+
+}
+
+.btn-edit:hover {
+    background-color: #fff7f7;
+    border-bottom: 2px solid #aeaeae
+}
+
+.btn-delete:hover {
+    background-color: #325166;
+    border-bottom: 2px solid #2e4a5e;
+}
