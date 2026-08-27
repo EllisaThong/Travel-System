@@ -1,0 +1,111 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(135deg, #202736 0%, #343f52 50%, #263549 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: #ecf0f1;
+}
+
+.packageTitle {
+    color: #41a085; /* Teal accent */
+    font-size: 32px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+.search-form {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search-form input[type="text"] {
+    padding: 10px 15px;
+    width: 40%;
+    border: 1px solid #41a085;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    background-color: #41a085; /* Teal */
+    color: #ffffff;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #1abc9c; /* Brighter teal */
+}
+
+.package-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.package-card {
+    width: 300px;
+    padding: 15px;
+    border: 1px solid #41a085;
+    border-radius: 12px;
+    background-color: #1a1a1a;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    overflow-wrap: break-word;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.5);
+}
+
+.package-card h2 {
+    color: #41a085;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.package-card p {
+    font-size: 14px;
+    margin: 6px 0;
+    line-height: 1.5;
+    color: #bdc3c7; /* Light gray text */
+}
+
+.package-card a {
+    color: #1abc9c; /* Brighter teal */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.package-card a:hover {
+    text-decoration: underline;
+}
+
+.package-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.package-link:hover .package-card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+    transition: 0.2s ease-in-out;
+}

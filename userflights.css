@@ -1,0 +1,165 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(135deg, #202736 0%, #343f52 50%, #263549 100%) !important;
+    color: #ecf0f1;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.page-title {
+    color: #41a085;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+.filter-form form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgba(26, 26, 26, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1000px;
+    margin: 20px auto;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+.filter-form input,
+.filter-form select {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: 1px solid #41a085;
+    border-radius: 8px;
+    width: 180px;
+    outline: none;
+    background: #2c3e50;
+    color: #ecf0f1;
+}
+
+.filter-form button {
+    padding: 10px 20px;
+    background-color: #41a085;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.filter-form button:hover {
+    background-color: #1abc9c;
+}
+
+.flights-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.flight-card {
+    background-color: #1a1a1a;
+    border: 1px solid #41a085;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #ecf0f1;
+}
+
+.flight-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
+    background: #141414;
+}
+
+.flight-card h3 {
+    color: #41a085;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.flight-card p {
+    font-size: 14px;
+    margin: 6px 0;
+    line-height: 1.4;
+    color: #bdc3c7;
+}
+
+.no-results {
+    text-align: center;
+    font-size: 18px;
+    margin: 40px auto;
+    color: #ecf0f1;
+}
+
+.search-button {
+    background-color: #41a085;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #1abc9c;
+}
+
+/* Optional: Button container for future actions */
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.select-button {
+    padding: 10px 20px;
+    background-color: #41a085;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.select-button:hover {
+    background-color: #1abc9c;
+}
+
+/* Responsive for smaller screens */
+@media screen and (max-width: 600px) {
+    .filter-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-form input,
+    .filter-form select,
+    .filter-form button {
+        width: 100%;
+    }
+}
+
+.flight-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.flight-link:hover .flight-card {
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
